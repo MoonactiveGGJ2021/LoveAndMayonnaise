@@ -41,7 +41,7 @@ public class MainMenuHandler : MonoBehaviour
 
     private IEnumerator WaitForFirstAnimationEnd()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.2f);
         
         OnGameStarted?.Invoke();
     }
