@@ -10,7 +10,7 @@ public class CameraShake : MonoBehaviour
     {
         PlayerHealth.OnPlayerHitEvent += x =>
         {
-            StartCoroutine(ShakeIt(0.15f, 0.2f));
+            StartCoroutine(ShakeIt(0.1f, 0.1f));
         };
     }
 
