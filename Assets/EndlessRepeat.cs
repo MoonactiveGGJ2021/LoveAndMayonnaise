@@ -6,7 +6,7 @@ public class EndlessRepeat : MonoBehaviour
 {
     public  float      BoundsSize = 0.9f;
     public float       MaxDistance = 5;
-    public  Camera     MainCamera;
+    private  Camera     MainCamera;
     private GameObject nextInstance;
     private SpriteRenderer spriteRenderer;
     
@@ -14,6 +14,8 @@ public class EndlessRepeat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        MainCamera = Camera.main;
+        
         spriteRenderer = GetComponent<SpriteRenderer>();
     }
 
