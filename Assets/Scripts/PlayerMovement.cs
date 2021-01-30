@@ -69,7 +69,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if (isGrounded)
+       // if (isGrounded)
         {
             rigidbody.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
             animator.SetTrigger("Jump");
