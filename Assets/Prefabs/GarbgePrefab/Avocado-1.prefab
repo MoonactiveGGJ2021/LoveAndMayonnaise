@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2259873709286397107}
   - component: {fileID: 7779938345160001545}
+  - component: {fileID: -6086455745578113676}
   m_Layer: 0
   m_Name: Avocado-1
   m_TagString: Obstacle
@@ -82,3 +83,16 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &-6086455745578113676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3031432754455638960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e39e901453cd342a7b570247ed9b6ddf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Index: 0
