@@ -12,14 +12,14 @@ public class Tooltip : MonoBehaviour
     
     public void ActiveGoodShit()
     {
-        /*if (count <= goodShit.Count - 1)
+        if (count <= goodShit.Count - 1)
         {
             Debug.Log("Active");
             goodShit[count].SetActive(true);
             count++;
-        }*/
+        }
 
-        if (true/*count == goodShit.Count*/)
+        if (count == goodShit.Count)
         {
             Debug.Log("Win");
             OnGameWin?.Invoke();
