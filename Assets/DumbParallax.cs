@@ -12,6 +12,8 @@ public class DumbParallax : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
+        
         playerRigidbody = player.GetComponent<Rigidbody2D>();
         ownRigidbody2D = GetComponent<Rigidbody2D>();
     }
