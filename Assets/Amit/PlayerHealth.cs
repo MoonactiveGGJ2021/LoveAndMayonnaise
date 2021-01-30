@@ -13,7 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public int m_LifeCounter { get; private set; } = 7;
 
     public static event Action<int> OnPlayerHitEvent;
-    public event Action OnPlayerDeath;
+    public static event Action OnPlayerDeath;
 
     private void OnCollisionEnter(Collision other)
     {
