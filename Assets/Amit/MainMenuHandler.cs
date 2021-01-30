@@ -23,7 +23,7 @@ public class MainMenuHandler : MonoBehaviour
     {
         if (canStart)
         {
-            if (Input.GetKeyDown(KeyCode.A))
+            if (Input.GetKeyDown(KeyCode.Space))
             {
                 StartGameplay();
             }
