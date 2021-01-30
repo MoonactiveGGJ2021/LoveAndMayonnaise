@@ -62,7 +62,8 @@ public class MainMenuHandler : MonoBehaviour
 
     private IEnumerator WaitForFirstAnimationEnd()
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(2.4f);
+        CameraAnimator.enabled = false;
         
         OnGameStarted?.Invoke();
     }
