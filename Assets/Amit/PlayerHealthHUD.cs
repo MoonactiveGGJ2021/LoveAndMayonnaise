@@ -8,9 +8,6 @@ public class PlayerHealthHUD : MonoBehaviour
 {
     public Sprite[] SandwichStates/* = new List<Sprite>()*/;
 
-    [SerializeField]
-    private PlayerHealth m_PlayerHealth;
-
     [SerializeField] 
     private Image m_SandwitchLifeImage;
 

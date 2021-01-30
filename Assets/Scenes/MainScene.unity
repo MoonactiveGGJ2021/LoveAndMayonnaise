@@ -446,6 +446,7 @@ GameObject:
   - component: {fileID: 551935149}
   - component: {fileID: 551935151}
   - component: {fileID: 551935150}
+  - component: {fileID: 551935152}
   m_Layer: 5
   m_Name: HealthBar
   m_TagString: Untagged
@@ -510,6 +511,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 551935148}
   m_CullTransparentMesh: 0
+--- !u!114 &551935152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 551935148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c200114c475d443bb822394aadb57d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SandwichStates:
+  - {fileID: 21300000, guid: d84b502a23be84ff194ea9c23a61fd43, type: 3}
+  - {fileID: 21300000, guid: 39a73775aa8ac4ead8381deb6f3e1430, type: 3}
+  - {fileID: 21300000, guid: 5166076f7fdc54ddb9242a2b6d957d52, type: 3}
+  - {fileID: 21300000, guid: 3922c867c68284490b2f608ef27b0f23, type: 3}
+  - {fileID: 21300000, guid: e2283b86d912d48639ac78b1d9b902ef, type: 3}
+  - {fileID: 21300000, guid: a97f44e1b6b5f4da58dbed58092f2bff, type: 3}
+  - {fileID: 21300000, guid: 593a7a18f55d540e6aa8a30f084f01e9, type: 3}
+  m_PlayerHealth: {fileID: 0}
+  m_SandwitchLifeImage: {fileID: 551935150}
 --- !u!1 &711653596
 GameObject:
   m_ObjectHideFlags: 0
