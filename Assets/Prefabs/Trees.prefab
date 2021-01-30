@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 3492660406883541446}
   - component: {fileID: 3492660406883541447}
+  - component: {fileID: 8747439092028369124}
+  - component: {fileID: 3380547114482066147}
+  - component: {fileID: -3262231630805563299}
   m_Layer: 0
   m_Name: Trees
   m_TagString: Untagged
@@ -82,3 +85,52 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8747439092028369124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492660406883541448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 278a3eb4ddfdf4746a949bc47f0c7264, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BoundsSize: 0.9
+  MainCamera: {fileID: 0}
+--- !u!114 &3380547114482066147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492660406883541448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 305bf2592151447f98f04261f28a646e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fraction: 0.01
+  player: {fileID: 0}
+--- !u!50 &-3262231630805563299
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3492660406883541448}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 0.0001
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 6
