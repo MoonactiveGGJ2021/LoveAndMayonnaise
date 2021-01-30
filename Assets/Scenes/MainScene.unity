@@ -210,6 +210,11 @@ Transform:
   m_Father: {fileID: 1846465437}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &295214470 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6172953837370543493, guid: e872e1a1860444138a453d9d178fb6c9, type: 3}
+  m_PrefabInstance: {fileID: 3544168711578189930}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &526337118
 GameObject:
   m_ObjectHideFlags: 0
@@ -927,6 +932,10 @@ PrefabInstance:
       propertyPath: CameraAnimator
       value: 
       objectReference: {fileID: 1846465436}
+    - target: {fileID: 3544168710395965521, guid: e872e1a1860444138a453d9d178fb6c9, type: 3}
+      propertyPath: m_PressToStartText
+      value: 
+      objectReference: {fileID: 295214470}
     - target: {fileID: 3544168710395965523, guid: e872e1a1860444138a453d9d178fb6c9, type: 3}
       propertyPath: m_Name
       value: TextHolder
