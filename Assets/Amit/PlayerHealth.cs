@@ -6,7 +6,9 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     private const string OBSTACLE_TAG_NAME = "Obstacle";
+    private const string GOODSHIT_TAG_NAME = "GoodShit";
 
+    public Tooltip tooltip;
     public int m_LifeCounter { get; private set; } = 7;
 
     public static event Action<int> OnPlayerHitEvent;
@@ -28,6 +30,17 @@ public class PlayerHealth : MonoBehaviour
             OnPlayerHit();
             Destroy(other.gameObject);
         }
+        if (other.gameObject.CompareTag(GOODSHIT_TAG_NAME))
+        {
+            OnGoodShitHit();
+        }
+    }
+
+    private void OnGoodShitHit()
+    {
+        tooltip.ActiveGoodShit();
+        var anim = tooltip.GetComponent<Animator>();
+        anim.SetTrigger("Active");
     }
 
     private void OnPlayerHit()
