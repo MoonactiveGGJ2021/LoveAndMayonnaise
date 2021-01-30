@@ -21,7 +21,7 @@ public class PMovment : MonoBehaviour
     BoxCollider2D myFeet;
     float gravityScaleAtStart;
 
-    Session gameSession;
+    //Session gameSession;
 
 
 
@@ -98,7 +98,7 @@ public class PMovment : MonoBehaviour
             myAnimator.SetTrigger("Dying");
             GetComponent<Rigidbody2D>().velocity = deathKick;
 
-            FindObjectOfType<Session>().ProcessPlayerDeath();
+           // FindObjectOfType<Session>().ProcessPlayerDeath();
         }
     }
 

@@ -6,6 +6,7 @@ public class Pickup : MonoBehaviour
 {
     //[SerializeField] AudioClip;
     //[SerializeField] int points = 10;
+    //[SerializeField] PlayerMovment playerMovment;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

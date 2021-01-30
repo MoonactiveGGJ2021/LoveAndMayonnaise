@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &19202257950480696
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 19202257950480698}
+  - component: {fileID: 19202257950480697}
+  m_Layer: 0
+  m_Name: SpawnerObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &19202257950480698
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19202257950480696}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.241732, y: 1.9441985, z: -24.367746}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &19202257950480697
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19202257950480696}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da7f986150ef8479d86dbd22b216a571, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnerObjects:
+  - {fileID: 3031432754455638960, guid: 84fe4109940cd4c4ba08ab330cb72a6b, type: 3}
+  - {fileID: 3544067692756227836, guid: 3362506143c8e44ba8acc1d7ec33b03a, type: 3}
+  - {fileID: 918497675147992811, guid: 1424438b25bce4dc28a4b3b77878bbd6, type: 3}
+  - {fileID: 8945325050884254430, guid: 9996a3fec9e854a379cfb80238bde3bf, type: 3}
+  - {fileID: 6410690743186958823, guid: 9986c9322dcca48b0a4f98cfd3a5df51, type: 3}
+  - {fileID: 1983647986025514983, guid: 879edd2b1811c4f618d09983862e8e67, type: 3}
+  - {fileID: 2805653513392147481, guid: ef43f15d3d71e4e6b9df07e3aa2d1075, type: 3}
+  player: {fileID: 9216980708302787095, guid: 58d0237fee4d5624f8736e45bfde5860, type: 3}
+  destroyTime: 6
+  minSpawnerTime: 2
+  maxSpawnerTime: 4
+  spawnDistance: 20
