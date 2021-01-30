@@ -23,7 +23,7 @@ public class MainMenuHandler : MonoBehaviour
     {
         if (canStart)
         {
-            if (Input.GetKeyDown(KeyCode.Space))
+            if (Input.GetKeyDown(KeyCode.A))
             {
                 StartGameplay();
             }
@@ -35,6 +35,13 @@ public class MainMenuHandler : MonoBehaviour
         canStart = false;
         m_PressToStartText.SetActive(false);
         CameraAnimator.SetTrigger(id: Start);
+
+        StartCoroutine(WaitForFirstAnimationEnd());
+    }
+
+    private IEnumerator WaitForFirstAnimationEnd()
+    {
+        yield return new WaitForSeconds(2f);
         
         OnGameStarted?.Invoke();
     }
