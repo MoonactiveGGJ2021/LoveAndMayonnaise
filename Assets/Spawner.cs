@@ -32,12 +32,22 @@ public class Spawner : MonoBehaviour
         }
     }
 
+    private int spawnCounter = 0;
     public void Spawn()
     {
+
         int randomObj = Random.Range(0, spawnerObjects.Count);
+
+        if (spawnerObjects[randomObj].GetComponent<Legs>())
+        {
+            if(spawnCounter % 5 != 0)
+                return;
+        }
+
         GameObject obj = Instantiate(spawnerObjects[randomObj]);
         obj.transform.position = new Vector3(player.transform.position.x + spawnDistance, obj.transform.position.y - 1, 1f);
         timeLastSpawn = 0;
+        spawnCounter += 1;
 
         randomTime = Random.Range(minSpawnerTime, maxSpawnerTime);
         Destroy(obj, destroyTime);
