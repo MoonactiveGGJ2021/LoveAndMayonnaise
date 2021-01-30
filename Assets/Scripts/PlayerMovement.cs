@@ -78,8 +78,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void Hit(int amount)
     {
-        rigidbody.velocity = Vector2.zero;
-        startTime = Time.time + 0.1f;
+        if (amount == 0)
+        {
+            Destroy(gameObject);
+        }
+        
+        /*rigidbody.velocity = Vector2.zero;
+        startTime = Time.time + 0.1f;*/
     }
 
     private void Move()

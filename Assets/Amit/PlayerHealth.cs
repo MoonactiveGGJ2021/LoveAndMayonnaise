@@ -12,11 +12,21 @@ public class PlayerHealth : MonoBehaviour
     public static event Action<int> OnPlayerHitEvent;
     public static event Action OnPlayerDeath;
 
-    private void OnCollision2DEnter(Collision other)
+    private void OnCollisionEnter2D(Collision2D other)
     {
         if (other.gameObject.CompareTag(OBSTACLE_TAG_NAME))
         {
             OnPlayerHit();
+            Destroy(other.gameObject);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag(OBSTACLE_TAG_NAME))
+        {
+            OnPlayerHit();
+            Destroy(other.gameObject);
         }
     }
 

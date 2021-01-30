@@ -36,7 +36,7 @@ public class Spawner : MonoBehaviour
     {
         int randomObj = Random.Range(0, spawnerObjects.Count);
         GameObject obj = Instantiate(spawnerObjects[randomObj]);
-        obj.transform.position = new Vector2(player.transform.position.x + spawnDistance, obj.transform.position.y);
+        obj.transform.position = new Vector3(player.transform.position.x + spawnDistance, obj.transform.position.y - 1, 1f);
         timeLastSpawn = 0;
 
         randomTime = Random.Range(minSpawnerTime, maxSpawnerTime);

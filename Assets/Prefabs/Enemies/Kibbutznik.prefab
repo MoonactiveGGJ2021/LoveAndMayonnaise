@@ -133,7 +133,7 @@ MonoBehaviour:
   - {fileID: 4687683533135902670}
   - {fileID: 7262127910640346251}
   m_Bounds:
-    m_Center: {x: 0.051742077, y: 0.042516947, z: 0.00000032037497}
+    m_Center: {x: 0.05174184, y: 0.042516947, z: 0.00000032037497}
     m_Extent: {x: 1.142973, y: 3.5550432, z: 1.4210855e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -181,7 +181,7 @@ GameObject:
   - component: {fileID: 3872654866035199502}
   m_Layer: 0
   m_Name: Kibbutznik
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -195,7 +195,7 @@ Transform:
   m_GameObject: {fileID: 983032399508584443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.98, y: -1.8, z: -4.3105493}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 5061830500990694751}
   m_Father: {fileID: 0}
@@ -211,7 +211,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.75}
@@ -473,7 +473,7 @@ MonoBehaviour:
   - {fileID: 1382912890282075713}
   - {fileID: 3297834661432756401}
   m_Bounds:
-    m_Center: {x: 1.1711141, y: 1.0727608, z: 0}
+    m_Center: {x: 1.1711141, y: 1.0727607, z: 0}
     m_Extent: {x: 1.298037, y: 1.8872054, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -579,7 +579,7 @@ MonoBehaviour:
   - {fileID: 3737251549779391081}
   - {fileID: 5076359627911863090}
   m_Bounds:
-    m_Center: {x: 1.3731583, y: -0.6570047, z: 0.00000032037497}
+    m_Center: {x: 1.3731579, y: -0.6570046, z: 0.00000032037497}
     m_Extent: {x: 1.915, y: 1.0938597, z: 2.842171e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenuHandler : MonoBehaviour
 {
@@ -33,10 +34,12 @@ public class MainMenuHandler : MonoBehaviour
         PlayerHealth.OnPlayerDeath -= PlayerDied;
     }
 
+    private bool canRestart = false;
+    
     private void PlayerDied()
     {
         m_GameOverScreen.SetActive(true);
-        canStart = true;
+        canRestart = true;
     }
 
     // Update is called once per frame
@@ -47,6 +50,14 @@ public class MainMenuHandler : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 StartGameplay();
+            }
+        }
+
+        if (canRestart)
+        {
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene("MainScene");
             }
         }
     }

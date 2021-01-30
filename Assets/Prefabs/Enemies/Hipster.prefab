@@ -266,7 +266,7 @@ MonoBehaviour:
   - {fileID: 8471868846070660353}
   - {fileID: 6002135936313648328}
   m_Bounds:
-    m_Center: {x: 1.1275337, y: 1.0268338, z: 0}
+    m_Center: {x: 1.1275336, y: 1.0268338, z: 0}
     m_Extent: {x: 1.3814789, y: 1.9573298, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 3872654866035199502}
   m_Layer: 0
   m_Name: Hipster
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -297,7 +297,7 @@ Transform:
   m_GameObject: {fileID: 983032399508584443}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.98, y: -1.8, z: -4.3105493}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 6341285193215991082}
   m_Father: {fileID: 0}
@@ -313,7 +313,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0.75}
@@ -575,8 +575,8 @@ MonoBehaviour:
   - {fileID: 1615208804804473729}
   - {fileID: 889343304527136566}
   m_Bounds:
-    m_Center: {x: 1.3731586, y: -0.5964999, z: 0.00000032037497}
-    m_Extent: {x: 1.915, y: 1.168735, z: 1.4210855e-14}
+    m_Center: {x: 1.373159, y: -0.5964998, z: 0.00000032037497}
+    m_Extent: {x: 1.9149997, y: 1.1687349, z: 1.4210855e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
 --- !u!1 &5181050058314445618
@@ -773,7 +773,7 @@ MonoBehaviour:
   - {fileID: 2427628525256755135}
   - {fileID: 1082908192056461347}
   m_Bounds:
-    m_Center: {x: 0.051742077, y: 0.042516947, z: 0.00000032037497}
+    m_Center: {x: 0.05174184, y: 0.042516947, z: 0.00000032037497}
     m_Extent: {x: 1.142973, y: 3.5550432, z: 1.4210855e-14}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
