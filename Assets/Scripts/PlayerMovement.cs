@@ -1,21 +1,30 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 10f;
     [SerializeField] private float jumpSpeed = 5f;
     [SerializeField] private float maxSpeed;
-    [SerializeField] private float slideAnimationEndTime;
+    [SerializeField] private float slideAnimationEndTime = 1;
     [SerializeField] private float slidePower;
-    
 
     private Vector2 direction = Vector2.right;
     private Rigidbody2D rigidbody;
+    private Animator animator;
     private bool canMove = true;
     private float startTime;
     private bool isGrounded;
     private bool isSliding;
-    private float slideEndTime;
+    public bool gameStarted;
+    public float slideEndTime;
+
+    private void Awake()
+    {
+        PlayerHealth.OnPlayerHitEvent += Hit;
+        MainMenuHandler.OnGameStarted += () => gameStarted = true;
+        animator = GetComponentInChildren<Animator>();
+    }
 
     void Start()
     {
@@ -46,11 +55,13 @@ public class PlayerMovement : MonoBehaviour
     
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        slideEndTime += Time.deltaTime;
+        
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             Jump();
         }
-        else if (Input.GetKeyDown(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftControl))
         {
             Slide();
         }
@@ -58,11 +69,14 @@ public class PlayerMovement : MonoBehaviour
 
     private void Jump()
     {
-        if(isGrounded)
+        if (isGrounded)
+        {
             rigidbody.AddForce(Vector2.up * jumpSpeed, ForceMode2D.Impulse);
+            animator.SetTrigger("Jump");
+        }
     }
 
-    private void Hit()
+    private void Hit(int amount)
     {
         rigidbody.velocity = Vector2.zero;
         startTime = Time.time + 0.1f;
@@ -70,8 +84,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void Move()
     {
+        if (!gameStarted) return;
         if (Time.fixedTime < startTime) return;
-        if (Time.fixedTime < slideEndTime) return;
 
         var fraction = 1.0f - (rigidbody.velocity.x / maxSpeed);
         var force = direction * moveSpeed * fraction;
@@ -81,7 +95,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void Slide()
     {
-        slideEndTime = Time.time + slideAnimationEndTime;
+        if (slideEndTime < slideAnimationEndTime) return;
+
         rigidbody.AddForce(Vector2.right * slidePower, ForceMode2D.Impulse);
+        
+        animator.SetTrigger("Slide");
+        slideEndTime = 0;
     }
 }

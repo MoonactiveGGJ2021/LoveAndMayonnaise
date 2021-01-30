@@ -7,15 +7,12 @@ public class PlayerHealth : MonoBehaviour
 {
     private const string OBSTACLE_TAG_NAME = "Obstacle";
 
-    [SerializeField]
-    private Collider2D m_Collider;
-
     public int m_LifeCounter { get; private set; } = 7;
 
     public static event Action<int> OnPlayerHitEvent;
     public static event Action OnPlayerDeath;
 
-    private void OnCollisionEnter(Collision other)
+    private void OnCollision2DEnter(Collision other)
     {
         if (other.gameObject.CompareTag(OBSTACLE_TAG_NAME))
         {

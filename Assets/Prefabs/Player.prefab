@@ -1151,6 +1151,7 @@ GameObject:
   - component: {fileID: 2032370452}
   - component: {fileID: 2032370454}
   - component: {fileID: 2032370455}
+  - component: {fileID: 3797490459252071048}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -1241,6 +1242,18 @@ MonoBehaviour:
   maxSpeed: 1
   slideAnimationEndTime: 1
   slidePower: 1
+--- !u!114 &3797490459252071048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9216980708302787095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf81dcaf25f3e4bfa82197477bd3d6f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9216980708310968617
 GameObject:
   m_ObjectHideFlags: 0
