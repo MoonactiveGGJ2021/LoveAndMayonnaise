@@ -26,6 +26,13 @@ public class PlayerMovement : MonoBehaviour
         animator = GetComponentInChildren<Animator>();
     }
 
+    public void Stop()
+    {
+        canMove = false;
+        rigidbody.velocity = Vector3.zero;
+        this.enabled = false;
+    }
+
     void Start()
     {
         canMove = true;

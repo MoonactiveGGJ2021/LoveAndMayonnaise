@@ -33,6 +33,7 @@ public class PlayerHealth : MonoBehaviour
         if (other.gameObject.CompareTag(GOODSHIT_TAG_NAME))
         {
             OnGoodShitHit();
+            Destroy(other.gameObject);
         }
     }
 

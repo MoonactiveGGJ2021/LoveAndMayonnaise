@@ -27,11 +27,13 @@ public class MainMenuHandler : MonoBehaviour
     private void Start()
     {
         PlayerHealth.OnPlayerDeath += PlayerDied;
+        Tooltip.OnGameWin += PlayerWin;
     }
 
     private void OnDestroy()
     {
         PlayerHealth.OnPlayerDeath -= PlayerDied;
+        Tooltip.OnGameWin -= PlayerWin;
     }
 
     private bool canRestart = false;
@@ -39,6 +41,12 @@ public class MainMenuHandler : MonoBehaviour
     private void PlayerDied()
     {
         m_GameOverScreen.SetActive(true);
+        canRestart = true;
+    }
+
+    private void PlayerWin()
+    {
+        m_WinnerScreen.SetActive(true);
         canRestart = true;
     }
 
