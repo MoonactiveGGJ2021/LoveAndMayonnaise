@@ -13,9 +13,19 @@ public class PlayerHealthHUD : MonoBehaviour
 
     private void Start()
     {
+        m_SandwitchLifeImage.enabled = false;
+        
         m_SandwitchLifeImage.sprite = SandwichStates[SandwichStates.Length - 1];
         
         PlayerHealth.OnPlayerHitEvent += OnPlayerHitEvent;
+
+        MainMenuHandler.OnGameStarted += () =>
+        {
+            if (!m_SandwitchLifeImage.enabled)
+            {
+                m_SandwitchLifeImage.enabled = true;
+            }
+        };
     }
 
     private void OnPlayerHitEvent(int lifeLeft)
