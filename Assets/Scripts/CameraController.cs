@@ -18,6 +18,7 @@ public class CameraController : MonoBehaviour
     void FixedUpdate()
     {
         float blend = 1f - Mathf.Pow(1f - followSharpness, Time.deltaTime * moveSpeed);
-        transform.position = Vector3.Lerp(transform.position, player.transform.position + offset, blend);
+        var newPos = new Vector2(player.transform.position.x + offset.x - 20, transform.position.y);
+        transform.position = Vector3.Lerp(transform.position, newPos, blend);
     }
 }
